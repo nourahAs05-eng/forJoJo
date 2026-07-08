@@ -1,0 +1,79 @@
+/* الصفحة كاملة */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    /* الخلفية */
+    background-image: url("background.png.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* توسيط المحتوى */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الحاوية */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* العنوان */
+h1 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 64px;
+    color: #B5A189;
+    margin-bottom: 60px;
+}
+
+/* الزر */
+button {
+    width: 179px;
+    height: 48px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        to right,
+        #CFBEAA,
+        #FFFFFF,
+        #CFBEAA
+    );
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* تأثير عند مرور الماوس */
+button:hover {
+    transform: scale(1.05);
+}
+.cd2 {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 40px;
+
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
