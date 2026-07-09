@@ -5,8 +5,9 @@ cd.addEventListener("click", function () {
 
     if (music.paused) {
 
-        music.play();
-        cd.querySelector("img").classList.add("playing");
+        music.play().then(() => {
+            cd.querySelector("img").classList.add("playing");
+        });
 
     } else {
 
