@@ -2,34 +2,67 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100dvh;
 
-    /* الخلفية */
     background-image: url("background.png.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* توسيط المحتوى */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow-x: hidden;
 }
+
 
 /* الحاوية */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
 }
+
 
 /* العنوان */
 h1 {
     font-family: "Homemade Apple", cursive;
-    font-size: 64px;
+    font-size: clamp(32px, 6vw, 64px);
     color: #B5A189;
     margin-bottom: 60px;
+    text-align: center;
 }
+
+
+/* الصورة */
+.cd2 {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 40px;
+}
+
+/* دوران السي دي وقت تشغيل الموسيقى */
+.cd2.playing {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* الزر */
 button {
@@ -46,34 +79,35 @@ button {
         #CFBEAA
     );
 
+    font-family: "Baskerville", serif;
     font-size: 20px;
+    font-weight: bold;
+
+    color: #B5A189;
+
     cursor: pointer;
 
     transition: 0.3s;
 }
 
-/* تأثير عند مرور الماوس */
+
 button:hover {
     transform: scale(1.05);
 }
-.cd2 {
-    width: 180px;
-    height: 180px;
 
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    margin-bottom: 40px;
-
-    animation: spin 8s linear infinite;
-}
 
 @keyframes spin {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
+}
+.container p {
+    white-space: pre-line;
+    width: 90%;
+    line-height: 1.8;
+    text-align: center;
 }
