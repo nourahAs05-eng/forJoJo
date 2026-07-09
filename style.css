@@ -32,8 +32,21 @@ body {
 }
 
 
+/* زر الـ CD */
+.cd-button {
+
+    border: none;
+    background: transparent;
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+
 /* صورة الـ CD */
 .cd2 {
+
     width: clamp(120px, 40vw, 180px);
     height: clamp(120px, 40vw, 180px);
 
@@ -41,12 +54,15 @@ body {
     object-fit: cover;
 
     margin-bottom: 35px;
+
 }
 
 
 /* دوران الـ CD وقت تشغيل الأغنية */
 .cd2.playing {
+
     animation: spin 8s linear infinite;
+
 }
 
 
@@ -63,8 +79,10 @@ body {
 }
 
 
+
 /* العنوان */
 h1 {
+
     font-family: "Homemade Apple", cursive;
 
     font-size: clamp(30px, 8vw, 64px);
@@ -74,17 +92,20 @@ h1 {
     margin: 0 0 50px;
 
     text-align: center;
+
 }
 
 
-/* الزر */
-button {
+
+/* زر Enter فقط */
+button:not(.cd-button) {
 
     width: 179px;
     height: 48px;
 
     border: none;
     border-radius: 30px;
+
 
     background: linear-gradient(
         to right,
@@ -106,23 +127,25 @@ button {
     cursor: pointer;
 
     transition: 0.3s;
+
 }
 
 
-/* حركة عند الضغط */
-button:active {
+
+/* تأثير زر Enter */
+button:not(.cd-button):active {
 
     transform: scale(0.95);
 
 }
 
 
-/* حركة عند المرور بالماوس */
-button:hover {
+button:not(.cd-button):hover {
 
     transform: scale(1.05);
 
 }
+
 
 
 /* صفحة الرسالة */

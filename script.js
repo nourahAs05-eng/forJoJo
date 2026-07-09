@@ -1,21 +1,17 @@
 const cd = document.getElementById("cdButton");
 const music = document.getElementById("music");
 
-cd.addEventListener("click", async function () {
+cd.addEventListener("click", function () {
 
     if (music.paused) {
 
-        try {
-            await music.play();
-            cd.classList.add("playing");
-        } catch (error) {
-            console.log("Audio error:", error);
-        }
+        music.play();
+        cd.querySelector("img").classList.add("playing");
 
     } else {
 
         music.pause();
-        cd.classList.remove("playing");
+        cd.querySelector("img").classList.remove("playing");
 
     }
 
